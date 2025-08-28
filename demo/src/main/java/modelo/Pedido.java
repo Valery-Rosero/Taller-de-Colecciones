@@ -1,4 +1,3 @@
-// src/main/java/modelo/Pedido.java
 package modelo;
 
 import java.util.Objects;
@@ -16,7 +15,6 @@ public class Pedido {
         this.total = total;
     }
     
-    // Getters
     public int getId() { return id; }
     public String getCliente() { return cliente; }
     public String getProducto() { return producto; }
