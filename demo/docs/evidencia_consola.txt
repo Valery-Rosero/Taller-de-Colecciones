@@ -1,0 +1,64 @@
+PS C:\delivery-express>  & 'C:\Program Files\Eclipse Adoptium\jdk-21.0.6.7-hotspot\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\delivery-express\demo\target\classes' 'deliveryexpress.Main' 
+=== PARTE A - ArrayList ===
+1. Pedidos iniciales:
+Pedido{id=1, cliente='Juan', producto='Hamburguesa', total=$25.0}
+Pedido{id=2, cliente='Maria', producto='Pizza', total=$35.0}
+Pedido{id=3, cliente='Carlos', producto='Ensalada', total=$15.0}
+Pedido{id=4, cliente='Ana', producto='Pizza', total=$45.0}
+Pedido{id=5, cliente='Luis', producto='Sushi', total=$60.0}
+
+2. Después de agregar pedidos urgentes:
+Pedido{id=7, cliente='Urgente2', producto='Hamburguesa', total=$30.0}
+Pedido{id=6, cliente='Urgente1', producto='Pizza', total=$50.0}
+Pedido{id=1, cliente='Juan', producto='Hamburguesa', total=$25.0}
+Pedido{id=2, cliente='Maria', producto='Pizza', total=$35.0}
+Pedido{id=3, cliente='Carlos', producto='Ensalada', total=$15.0}
+Pedido{id=4, cliente='Ana', producto='Pizza', total=$45.0}
+Pedido{id=5, cliente='Luis', producto='Sushi', total=$60.0}
+
+=== PARTE A - LinkedList ===
+1. Pedidos iniciales:
+Pedido{id=1, cliente='Juan', producto='Hamburguesa', total=$25.0}
+Pedido{id=2, cliente='Maria', producto='Pizza', total=$35.0}
+Pedido{id=3, cliente='Carlos', producto='Ensalada', total=$15.0}
+Pedido{id=4, cliente='Ana', producto='Pizza', total=$45.0}
+Pedido{id=5, cliente='Luis', producto='Sushi', total=$60.0}
+
+2. Después de agregar pedidos urgentes:
+Pedido{id=7, cliente='Urgente2', producto='Hamburguesa', total=$30.0}
+Pedido{id=6, cliente='Urgente1', producto='Pizza', total=$50.0}
+Pedido{id=1, cliente='Juan', producto='Hamburguesa', total=$25.0}
+Pedido{id=2, cliente='Maria', producto='Pizza', total=$35.0}
+Pedido{id=3, cliente='Carlos', producto='Ensalada', total=$15.0}
+Pedido{id=4, cliente='Ana', producto='Pizza', total=$45.0}
+Pedido{id=5, cliente='Luis', producto='Sushi', total=$60.0}
+
+3. Explicación: Para 1000 pedidos urgentes, LinkedList es más eficiente
+   porque insertar al inicio es O(1), mientras que en ArrayList es O(n)
+
+=== PARTE B - HashSet ===
+Contenido del HashSet:
+Pedido{id=1, cliente='Juan', producto='Hamburguesa', total=$25.0}
+Pedido{id=2, cliente='Maria', producto='Pizza', total=$35.0}
+Pedido{id=3, cliente='Carlos', producto='Ensalada', total=$15.0}
+Pedido{id=4, cliente='Ana', producto='Pizza', total=$45.0}
+Pedido{id=5, cliente='Luis', producto='Sushi', total=$60.0}
+
+Explicación: Los duplicados no aparecen porque HashSet no permite elementos repetidos.
+Para que esto funcione correctamente, la clase Pedido debe sobrescribir equals y hashCode.
+
+=== PARTE C - HashMap ===
+Pedidos de Juan:
+Pedido{id=10, cliente='Juan', producto='Pizza', total=$40.0}
+Pedido{id=11, cliente='Juan', producto='Hamburguesa', total=$30.0}
+
+
+=== PARTE D - Genéricos ===
+Pedidos de Pizza:
+Pedido{id=1, cliente='Juan', producto='Pizza', total=$40.0}
+Pedido{id=3, cliente='Carlos', producto='Pizza', total=$55.0}
+
+Pedidos con total mayor a $50:
+Pedido{id=3, cliente='Carlos', producto='Pizza', total=$55.0}
+Pedido{id=4, cliente='Ana', producto='Sushi', total=$70.0}
+PS C:\delivery-express>
